@@ -1,6 +1,19 @@
 // On your marks, get set...
 $(document).ready(function(){
+	console.log("loading 1");
 	
+	/* Show/hide dot lav labels on hover */
+    $('nav#primary a').hover(
+    	function () {
+    		console.log("hovering")
+			$(this).prev('h1').show();
+		},
+		function () {
+			$(this).prev('h1').hide();
+		}
+    );
+
+
 	$("img[rel]").overlay();
     
 						
@@ -68,15 +81,6 @@ $(document).ready(function(){
 			
 	});	// each data-type
 
-	/* Show/hide dot lav labels on hover */
-    $('nav#primary a').hover(
-    	function () {
-			$(this).prev('h1').show();
-		},
-		function () {
-			$(this).prev('h1').hide();
-		}
-    );
 
 	/* Next/prev and primary nav btn click handlers */
 	$('a.first').click(function(){
